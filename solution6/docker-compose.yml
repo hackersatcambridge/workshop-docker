@@ -1,0 +1,22 @@
+version: '3'
+
+# Containers to be instantiated in environment
+services:
+  jupyter:
+    image: workshop-docker/example4
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/tmp/notebooks
+    links:
+      - mysql
+  mysql:
+    image: mysql/mysql-server
+    volumes:
+      - workshop-docker-mysqldata:/var/lib/mysql
+
+# External volumes for the declared services
+volumes:
+  workshop-docker-mysqldata:
+    external:
+      name: workshop-docker-mysqldata
