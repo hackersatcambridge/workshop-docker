@@ -19,10 +19,10 @@ A clean slate is always a great starting point.
 
 We want to have the image print `Hello World.` when run. Here are some useful Dockerfile commands:
 
-| Command | Arguments                                      | Description               |
-|---------|------------------------------------------------|---------------------------|
-| FROM    | `<image name>`                                 | Base image for this image |
-| CMD     | `<shell-command | array-of-command-arguments>` | Command to be run         |
+| Command | Arguments                                       | Description               |
+|---------|-------------------------------------------------|---------------------------|
+| FROM    | `<image name>`                                  | Base image for this image |
+| CMD     | `<shell-command OR array-of-command-arguments>` | Command to be run         |
 
 ## Building the image
 
